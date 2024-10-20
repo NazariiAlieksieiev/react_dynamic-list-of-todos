@@ -17,7 +17,7 @@ export const TodoList: React.FC<Props> = ({
       event.preventDefault();
       onSelected(todo);
     },
-    [],
+    [onSelected],
   );
 
   return (

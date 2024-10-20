@@ -20,7 +20,7 @@ export const TodoFilter: React.FC<Props> = ({
       event.preventDefault();
       onQueryChanged('');
     },
-    [],
+    [onQueryChanged],
   );
 
   return (

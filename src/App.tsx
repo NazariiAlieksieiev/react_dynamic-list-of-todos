@@ -1,5 +1,5 @@
 /* eslint-disable max-len */
-import React, { useCallback, useEffect, useMemo, useState } from 'react';
+import React, { useEffect, useMemo, useState } from 'react';
 import 'bulma/css/bulma.css';
 import '@fortawesome/fontawesome-free/css/all.css';
 // eslint-disable-next-line import/no-extraneous-dependencies
@@ -31,12 +31,9 @@ export const App: React.FC = () => {
     loadTodos();
   }, []);
 
-  const applyQuery = useCallback(
-    debounce((string: string) => {
-      setAppliedQuery(string);
-    }, 300),
-    [],
-  );
+  const applyQuery = debounce((string: string) => {
+    setAppliedQuery(string);
+  }, 300);
 
   const handleInput = (value: string) => {
     applyQuery(value);

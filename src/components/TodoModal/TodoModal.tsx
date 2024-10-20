@@ -30,7 +30,7 @@ export const TodoModal: React.FC<Props> = ({ selectedTodo, onCloseModal }) => {
       event.preventDefault();
       onCloseModal(null);
     },
-    [],
+    [onCloseModal],
   );
 
   return (
